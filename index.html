@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alfredo De Guzman's personal IT portfolio featuring background, skills, and certificates.">
+
+  <title>My Portfolio | Alfredo De Guzman</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Go to home">
+      <span class="brand-mark">A</span>
+      <span>MY<span class="brand-light">PORTFOLIO</span></span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="navbar"
+      type="button"
+    >
+      ☰
+    </button>
+
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#resume">Resume</a>
+      <a class="nav-link" href="#certificates">Certificates</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME SECTION -->
+    <section class="hero section" id="home">
+
+      <div class="hero-content">
+        <h1>
+          Hello, I'm
+          <br><span class="accent">DE GUZMAN, ALFREDO F</span>
+
+        </h1>
+
+        <p class="hero-copy">
+          I am an Information Technology student who is eager to develop
+          my technical skills, explore new technologies,
+          and create practical projects that can solve real-world problems.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#certificates">
+            Explore Certificates
+            <span aria-hidden="true">↘</span>
+          </a>
+
+          <a class="button button-outline" href="#about">
+            More About Me
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>IT</strong>
+            <span>Student</span>
+          </div>
+
+          <div>
+            <strong>Learn</strong>
+            <span>Every day</span>
+          </div>
+
+          <div>
+            <strong>Build</strong>
+            <span>With purpose</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE PICTURE -->
+      <div class="hero-visual hero-photo-visual">
+        <div class="hero-photo-frame">
+          <img
+            src="images/alfredo-picture.jpg"
+            alt="Portrait of Alfredo De Guzman"
+            class="hero-profile-picture"
+          >
+        </div>
+
+        <span class="float-tag tag-one">IT Student</span>
+        <span class="float-tag tag-two">✦ Creative thinking</span>
+      </div>
+
+      <a class="scroll-cue" href="#about">
+        <span></span>
+        SCROLL TO EXPLORE
+      </a>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about section" id="about">
+
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span class="eyebrow-line"></span>
+          A LITTLE ABOUT ME
+        </p>
+
+        <h2>
+          Learning today.<br>
+          <span class="accent">Building for tomorrow.</span>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-note">
+          <div class="quote-mark">“</div>
+
+          <p>
+            I believe that every new skill is a chance to improve,
+            solve problems, and create something useful.
+          </p>
+
+          <span class="note-line"></span>
+          <small>MY PERSONAL MINDSET</small>
+        </div>
+
+        <div class="about-copy">
+          <h3>My Background</h3>
+
+          <p>
+            I am a Bachelor of Science in Information Technology
+            student. Through school activities, training, and
+            personal practice, I continue to develop my knowledge
+            of computer systems, networking, and digital tools.
+          </p>
+
+          <p>
+            I am also interested in web design and creative work
+            such as video and commercial editing. My goal is to
+            keep learning, gain real-world experience, and use my
+            skills to make helpful and meaningful projects.
+          </p>
+
+          <div class="skill-chips">
+            <span>Information Technology</span>
+            <span>Computer Systems</span>
+            <span>Networking</span>
+            <span>Web Design</span>
+            <span>Creative Editing</span>
+          </div>
+
+          <a class="text-link" href="#certificates">
+            See my learning journey
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CERTIFICATES SECTION -->
+    <section class="certificates section" id="certificates">
+
+      <div class="section-heading certificates-heading">
+        <div>
+          <p class="eyebrow">
+            <span class="eyebrow-line"></span>
+            LEARNING &amp; ACHIEVEMENTS
+          </p>
+
+          <h2>
+            My <span class="accent">Certificates</span>
+          </h2>
+
+          <p class="section-description">
+            Explore the training and learning experiences I have
+            completed. Search for a certificate or organization
+            to find the collection you want to view.
+          </p>
+        </div>
+
+        <div class="certificate-count">
+          <strong id="visibleCount">5</strong>
+          <span>
+            certificate<br>
+            categories
+          </span>
+        </div>
+      </div>
+
+
+      <!-- CERTIFICATE SEARCH -->
+      <div class="certificate-tools">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+
+          <input
+            type="search"
+            id="certificateSearch"
+            placeholder="Search certificate categories or titles..."
+            aria-label="Search certificates"
+            autocomplete="off"
+          >
+
+          <kbd aria-hidden="true">⌕</kbd>
+        </label>
+      </div>
+
+<!-- CERTIFICATE CARDS GENERATED BY JAVASCRIPT -->
+<div
+  class="certificate-grid"
+  id="certificateGrid"
+  aria-live="polite"
+></div>
+
+<!-- NO SEARCH RESULTS -->
+<div class="empty-state" id="emptyState" hidden>
+  <div class="empty-icon">⌕</div>
+  <h3>No certificates found</h3>
+  <p>Try another search word or certificate category.</p>
+
+  <button
+    class="button button-outline"
+    id="clearSearch"
+    type="button"
+  >
+    Clear Search
+  </button>
+</div>
+      <div
+        class="certificate-grid"
+        id="certificateGrid"
+        aria-live="polite"
+      ></div>
+
+
+      <!-- NO SEARCH RESULTS -->
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-icon">⌕</div>
+
+        <h3>No certificates found</h3>
+
+        <p>
+          Try another search word or certificate category.
+        </p>
+
+        <button
+          class="button button-outline"
+          id="clearSearch"
+          type="button"
+        >
+          Clear Search
+        </button>
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- RESUME SECTION -->
+<section class="resume section" id="resume">
+
+  <div class="section-heading">
+    <p class="eyebrow">
+      <span class="eyebrow-line"></span>
+      MY RESUME
+    </p>
+
+    <h2>
+      View my <span class="accent">Resume</span>
+    </h2>
+
+    <p class="section-description">
+      Choose the format that works best for you: a designed
+      version for reading, or a plain version for applicant
+      tracking systems.
+    </p>
+  </div>
+
+  <div class="resume-grid">
+
+    <article class="resume-card">
+      <span class="resume-tag">PDF</span>
+      <h3>Traditional Resume</h3>
+      <p>
+        Includes my objective, education, academic projects,
+        skills, and seminars attended.
+      </p>
+      <div class="resume-actions">
+        <a class="button button-primary"
+           href="resume/traditonal-resume.pdf"
+           target="_blank" rel="noopener noreferrer">
+          View PDF <span aria-hidden="true">↗</span>
+        </a>
+        <a class="button button-outline"
+           href="resume/traditonal-resume.pdf"
+           download>
+          Download
+        </a>
+      </div>
+    </article>
+
+    <article class="resume-card">
+      <span class="resume-tag">DOCX</span>
+      <h3>ATS-Friendly Resume</h3>
+      <p>
+        A clean, single-column version that is easy for
+        applicant tracking systems to read.
+      </p>
+      <div class="resume-actions">
+<!-- ATS RESUME -->
+<div class="resume-actions">
+  <button class="button button-primary" type="button"
+          data-resume-view="resume/ats-resume.docx"
+          data-title="ATS-Friendly Resume">
+    View Resume <span aria-hidden="true">↗</span>
+  </button>
+  <a class="button button-outline"
+     href="resume/ats-resume.docx" download>
+    Download DOCX
+  </a>
+</div>
+</div>
+    </article>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact section" id="contact">
+
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span class="eyebrow-line"></span>
+          LET'S CONNECT
+        </p>
+
+        <h2>
+          Get in <span class="accent">Touch</span>
+        </h2>
+
+        <p class="section-description">
+          Have a project, opportunity, or question?
+          Feel free to contact me.
+        </p>
+      </div>
+
+
+      <div class="contact-grid">
+
+        <div class="contact-copy">
+          <h3>Let's work on something meaningful.</h3>
+
+          <p>
+            I am always open to learning, collaborating, and
+            connecting with people who share an interest in
+            technology and creative work.
+          </p>
+        </div>
+
+
+        <div class="contact-details">
+
+          <!-- REPLACE WITH YOUR REAL EMAIL -->
+          <a
+            class="contact-item"
+            href="mailto:your.email@example.com"
+          >
+            <span class="contact-icon" aria-hidden="true">✉</span>
+
+            <span>
+              <small>EMAIL</small>
+              <strong>alfredo@example.com</strong>
+            </span>
+
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+
+
+
+          <!-- REPLACE WITH YOUR SOCIAL PROFILE -->
+          <a
+            class="contact-item"
+            href="#contact"
+            data-placeholder-link
+          >
+            <span class="contact-icon" aria-hidden="true">◎</span>
+
+            <span>
+              <small>FACEBOOK / SOCIAL</small>
+              <strong>Alfredo De Guzman</strong>
+            </span>
+
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">A</span>
+
+      <span>
+        MY<span class="brand-light">PORTFOLIO</span>
+      </span>
+    </a>
+
+    <p>Designed with purpose. Built to keep growing.</p>
+
+    <a href="#home" class="back-top">
+      Back to top ↑
+    </a>
+
+    <small>
+      © <span id="year"></span> Alfredo De Guzman.
+      All rights reserved.
+    </small>
+
+  </footer>
+
+
+  <!-- CERTIFICATE COLLECTION MODAL -->
+  <div
+    class="modal"
+    id="certificateModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-backdrop"
+      data-close-modal
+    ></div>
+
+    <div class="modal-panel">
+
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">CERTIFICATE COLLECTION</p>
+          <h2 id="modalTitle">Certificate Category</h2>
+        </div>
+
+        <button
+          class="modal-close"
+          id="modalClose"
+          type="button"
+          aria-label="Close certificate collection"
+        >
+          ×
+        </button>
+      </div>
+
+
+      <!-- JavaScript inserts all PDFs for the selected category -->
+      <div
+        class="modal-body"
+        id="modalBody"
+      ></div>
+
+
+      <div class="modal-footer">
+        <span id="modalSummary">
+          All uploaded certificates in this category appear below.
+        </span>
+
+        <a
+          id="openPdf"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open first PDF in new tab ↗
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- RESUME VIEWER MODAL -->
+<div class="modal" id="resumeModal" role="dialog" aria-modal="true"
+     aria-labelledby="resumeModalTitle" aria-hidden="true">
+  <div class="modal-backdrop" data-close-resume></div>
+  <div class="modal-panel">
+    <div class="modal-header">
+      <div>
+        <p class="eyebrow">RESUME</p>
+        <h2 id="resumeModalTitle">Resume</h2>
+      </div>
+      <button class="modal-close" id="resumeClose" type="button"
+              aria-label="Close resume">×</button>
+    </div>
+    <div class="modal-body">
+      <iframe id="resumeFrame" title="Resume preview"></iframe>
+    </div>
+  </div>
+</div>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
